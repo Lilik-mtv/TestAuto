@@ -1,0 +1,7 @@
+
+1. Locatorul Class
+
+                WebDriverManager.chromedriver().setup();
+		ChromeDriver driver = new ChromeDriver();
+		driver.get("https://999.md");
+	   	driver.findElementByClassName("cookies-policy__wrapper__elem__confirm").click();
