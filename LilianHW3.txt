@@ -1,0 +1,63 @@
+                WebDriverManager.chromedriver().setup();
+		ChromeDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.toyota.com/");
+		driver.manage().window().maximize();
+		Thread.sleep(2000);
+				
+		//driver.findElement(By.xpath("/html/body/div/div/div/div/div/div/div/div/div/header/div/nav/ul/li/button")).click();// Absolut = Ruleaza
+		
+
+	        driver.get("https://www.toyota.com/");
+		driver.manage().window().maximize();
+		Thread.sleep(2000);
+				
+		//driver.findElement(By.xpath("//button[@class='main-nav-link main-nav-link select-vehicle']")).click();// Relativ= Ruleaza
+
+                
+
+                driver.get("https://999.md");
+		driver.manage().window().maximize();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id=\"cookiesPolicy\"]/div/div[2]/button[1]")).click();
+		Thread.sleep(2000);
+	        //driver.findElement(By.xpath("//a[starts-with(@href,'/ro/category/all-for-home')]")).click();//Starts-whith
+
+
+                driver.get("https://999.md");
+		driver.manage().window().maximize();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id=\"cookiesPolicy\"]/div/div[2]/button[1]")).click();
+		Thread.sleep(2000);
+                driver.findElement(By.xpath("//span[ends-with(@class,'btn-helpchat-icon')]")).click();//Ends-whits = Nu ruleaza
+
+
+
+                driver.get("https://stiri.md/");
+		driver.manage().window().maximize();
+		driver.findElement(By.xpath("//h1[text()='Capitala Europeană a Tineretului 2027: Chișinăul, printre finaliști']")).click();// Text = Ruleaza
+
+                driver.get("https://www.olx.ro/");
+		driver.manage().window().maximize();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id=\"onetrust-accept-btn-handler\"]")).click();
+		driver.findElement(By.xpath("//*[@id=\"searchmain-container\"]/div[2]/div/div/div/a[18]/span")).click();
+		driver.findElement(By.xpath("//button[@id='btn_submit' and @type='submit']")).click();// And = Ruleaza
+
+                driver.get("https://www.olx.ro/");
+		driver.manage().window().maximize();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id=\"onetrust-accept-btn-handler\"]")).click();
+		driver.findElement(By.xpath("//*[@id=\"hydrate-root\"]/header/div/div/div[2]/a")).click();
+		driver.findElement(By.xpath("//button[@data-testid='facebook-button' or @class='css-17pvrqn']")).click(); Or=Nu ruleaza
+
+		driver.get("https://www.olx.ro/");
+		driver.manage().window().maximize();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id=\"onetrust-accept-btn-handler\"]")).click();
+	        driver.findElement(By.xpath("//span[contains(@class,'1o5osl')]")).click(); Contains= Ruleaza
+		
+
+
+
+
