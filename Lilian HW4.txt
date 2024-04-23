@@ -1,0 +1,23 @@
+               
+
+                driver.get("https://makler.md/");
+		driver.manage().window().maximize();
+		Thread.sleep(2000);
+		
+		//driver.findElement(By.cssSelector("button#header_searchButton")).click(); ID attribute-run
+					
+		//driver.findElement(By.cssSelector("span.mr5")).click(); Class attribute-run
+		//driver.findElement(By.cssSelector("a.catMenu")).click();//  Class attribute- run
+				
+		//driver.findElement(By.cssSelector("a[class='btn_solid btn_green btn_45']")).click();// other attributes-run
+		//driver.findElement(By.cssSelector("a[href='/ru/real-estate']")).click();//-on Недвижимость  other attributes-run
+		//driver.findElement(By.cssSelector("span[data-w='pubSelList']")).click();// - on Молдова и Приднестровье - other attributes-run
+				
+		//driver.findElement(By.cssSelector("input[id='header_searchField'][type='text']")).click(); on Placeholder(Найти среди)- Multiple attr-run
+		//driver.findElement(By.cssSelector("input#header_searchField[id='header_searchField'][type='text']")).click();on Placeholder(Найти среди)- Multiple attr-run
+		//driver.findElement(By.cssSelector("input[class='disable-border'][name='query']")).click(); on Placeholder(Найти среди)- Multiple attr-run
+		//driver.findElement(By.cssSelector("input.disable-border[class='disable-border'][name='query']")).click();//on Placeholder(Найти среди)- Multiple attr-run
+		
+		//driver.findElement(By.cssSelector("a[class^='catMenu new_year_']")).click(); on Конфискованное имущество - prefix substring- run
+		//driver.findElement(By.cssSelector("a[class$='new_year_red']")).click();on Конфискованное имущество - suffix substring- run
+		//driver.findElement(By.cssSelector("a[class*='Menu new_year_r']")).click();on Конфискованное имущество - matching substring- run
