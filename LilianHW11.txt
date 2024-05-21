@@ -1,0 +1,172 @@
+
+
+Feature: Pagina "Utest.com" 
+
+Scenario 1: Utilizatorul nelogat poate examina continutul al submeniului "Why uTest" a paginei "Utest.com" 
+
+Given Utilizatorul nelogat se află pe pagina submeniului "Why uTest" a paginei Utest.com 
+
+
+When Utilizatorul da clic pe  butonul Play a videoului  "Why uTest?"  
+Then Utilizatorul ar trebui sa vada  rualarea unui videou ce contine sunet cu durata de  "1:46"
+And  Utilizatorul apasă butonul "Inchide"
+ 
+
+When Utilizatorul face scroll down  pe pagina "Why uTest" pina la categoria  "Our Community"    
+Then Utilizatorul  ar trebui sa vada textul din categoria "Our Community" 
+
+
+When Utilizatorul face scroll down  pe pagina "Why uTest" pina la categoria  "Paid Projects"   
+Then Utilizatorul  ar trebui sa vada textul din categoria "Paid Projects" 
+
+When Utilizatorul face scroll down  pe pagina "Why uTest" pina la categoria  "The uTest Academy"
+Then Utilizatorul  ar trebui sa vada textul din categoria "The uTest Academy" 
+
+
+When Utilizatorul face scroll down  pe pagina "Why uTest" pina la categoria  "Articles & Forums"
+Then Utilizatorul  ar trebui sa vada textul din categoria "Articles & Forums"
+
+When Utilizatorul face scroll down  pe pagina "Why uTest" pina la categoria  "Trusted & Secure"
+Then Utilizatorul  ar trebui sa vada textul din categoria "Trusted & Secure"
+
+
+
+Scenario 2: Utilizatorul nelogat poate examina continutul compartimentului "Frequently Asked Quesstions" al submeniului "About Us"  a paginei "Utest.com" 
+
+Given Utilizatorul nelogat se află la  compartimentul "Frequently Asked Quesstions" a submeniului  "About Us"  al paginei "Utest.com" 
+
+When Utilizatorul da clic pe  butonul Dropdown al elementului "How do testers earn money on uTest?"  
+Then Utilizatorul ar trebui sa vada un text ce descrie raspunsul la intrebarea  "How do testers earn money on uTest?"  
+
+
+When Utilizatorul da clic pe  butonul Dropdown al elementului "How are testers selected for projects?"  
+Then Utilizatorul ar trebui sa vada un text ce descrie raspunsul la intrebarea  "How are testers selected for projects?"  
+
+
+When Utilizatorul da clic pe  butonul Dropdown al elementului "What types of projects do testers work on?"  
+Then Utilizatorul ar trebui sa vada un text ce descrie raspunsul la intrebarea  "What types of projects do testers work on?"  
+
+
+When Utilizatorul da clic pe  butonul Dropdown al elementului "Do I need to have prior testing experience to join?"  
+Then Utilizatorul ar trebui sa vada un text ce descrie raspunsul la intrebarea  "Do I need to have prior testing experience to join?"  
+
+
+When Utilizatorul da clic pe  butonul Dropdown al elementului "Do I have to pay to register on uTest?"  
+Then Utilizatorul ar trebui sa vada un text ce descrie raspunsul la intrebarea  "Do I have to pay to register on uTest?" 
+
+
+When Utilizatorul da clic pe  butonul Dropdown al elementului "Is uTest safe and secure to sign up for?"  
+Then Utilizatorul ar trebui sa vada un text ce descrie raspunsul la intrebarea  "Is uTest safe and secure to sign up for?" 
+
+
+When Utilizatorul da clic pe  butonul Dropdown al elementului "Do I need to be located in a certain area for projects?"  
+Then Utilizatorul ar trebui sa vada un text ce descrie raspunsul la intrebarea  "Do I need to be located in a certain area for projects?"  
+
+
+Scenario 3: Utilizatorul nelogat nu poate se loga cu un email nevalid si parola valida
+
+Given Utilizatorul nelogat se află pe pagina submeniului "Log in "  al paginei "Utest.com"
+When Utilizatorul tapeaza textul Nevalid@mail.com  in boxa  "Email Address" 
+And  Utilizatorul tapeaza textul ParolaValida  in boxa  "Password" 
+And  Utilizatorul da click pe butonul "Sign in"
+Then Utilizatorul ar trebui sa vada un mesaj de eroare cu  textul   "Invalid username or password"
+
+
+Scenario 4 : Utilizatorul nelogat nu poate se loga cu un email valid si parola nevalida
+
+Given Utilizatorul nelogat se află pe pagina submeniului "Log in "  al paginei "Utest.com"
+When Utilizatorul tapeaza textul Valid@mail.com  in boxa  "Email Address" 
+And  Utilizatorul tapeaza textul ParolaNevalida  in boxa  "Password" 
+And  Utilizatorul da click pe butonul "Sign in"
+Then Utilizatorul ar trebui sa vada un mesaj de eroare cu  textul   "Invalid username or password"
+
+
+Scenario 5 : Utilizatorul nelogat se  poate loga cu un email valid si o parola valida
+
+When Utilizatorul tapeaza textul Valid@mail.com  in boxa  "Email Address" 
+And  Utilizatorul tapeaza textul ParolValida  in boxa  "Password" 
+And  Utilizatorul da click pe butonul "Sign in"
+Then Utilizatorul ar trebui sa fie logat si redectionat in contul personal
+
+
+
+Descriere: Utilizatorul nelogat nu se  poate  loga cu un email valid si o parola valida   
+
+Pre-conditii:
+    • dispozitiv desktop conectat la rețeaua de alimentare sau pe baterie
+    • sistem de operare
+    • conexiune la rețeaua de internet
+    • browser
+    • cont pe uTest.com
+
+Mediu de testare: www.uTest.com, setat in limba engleză
+
+Pașii de reprodus:
+    1. Pornește dispozitivul
+    2. Conectează rețeaua de internet
+    3. Deschide browserul
+    4. Tapează textul "uTest.com" în secțiunea de căutare
+    5. Apasă tasta "Enter"
+    6. Localizeaza  butonul "Log In"
+    7. Apasă butonul "Log In"
+    8. Tapeaza textul Valid@mail.com  in boxa  "Email Address" 
+    9. Tapeaza textul ParolValida  in boxa  "Password"  
+    10. Apasă butonul "Sign In"
+
+
+Rezultatul asteptat: Utilizatorul nelogat poate se loga cu un email valid si o parola valida 
+
+
+Rezultatul actual: Utilizatorul nelogat nu se  poate  loga cu un email valid si o parola valida 
+
+
+Atasament: 1.jpg
+Incercari de repetare: 0
+Nume programator: Bill
+Data si timpul: 05/22/24 4:00 PM
+Severitatea: Inalta
+Prioritate: Inalta
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+And Utilizatorul selecteaza una din stelele disponibile
+And Utilizatorul apasă butonul “Lasa o recenzie”
+Then Utilizatorul ar trebui sa vada un mesaj de succes cu urmatorul text “Bravo, recenzia ta a fost adaugata”
+       
+
+
+ And Utilizatorul ar trebui sa vada recenzia scrisa de el in sectiunea “Recenzii”
+When Utilizatorul introduce textul “E un produs excelent” in placeholder-ul de recenzie
+        And Utilizatorul selecteaza una din stelele disponibile
+And Utilizatorul apasă butonul “Lasa o recenzie”
+Then Utilizatorul ar trebui sa vada un mesaj de succes cu urmatorul text “Bravo, recenzia ta a fost adaugata”
+        And Utilizatorul ar trebui sa vada recenzia scrisa de el in sectiunea “Recenzii”
+        When Utilizatorul introduce textul “E un produs fascinant” in placeholder-ul de recenzie
+        And Utilizatorul selecteaza una din stelele disponibile
+And Utilizatorul apasă butonul “Lasa o recenzie”
+Then Utilizatorul ar trebui sa vada un mesaj de succes cu urmatorul text “Bravo, recenzia ta a fost adaugata”
+        And Utilizatorul ar trebui sa vada recenzia scrisa de el in sectiunea “Recenzii”
+        Given Utilizatorul logat se află pe prima pagina
+When Utilizatorul da click pe pictograma stelutelor sau pictograma comentariului, afisate sub imaginea unui produs
+        And Utilizatorul selecteaza una din stelele disponibile
+And Utilizatorul apasă butonul “Lasa o recenzie”
+Then Utilizatorul ar trebui sa vada un mesaj de succes cu urmatorul text “Bravo, recenzia ta a fost adaugata”
+        And Utilizatorul ar trebui sa vada recenzia scrisa de el in sectiunea “Recenzii”
