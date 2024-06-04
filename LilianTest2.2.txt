@@ -1,0 +1,93 @@
+Clasa de Baza
+
+package ui;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class JavaTest2 {
+
+	
+	
+	@Test(dataProvider = "credentials",dataProviderClass = JavaTest2Extern.class) 
+	
+	
+	public void providerDataTest(String username, String password) throws InterruptedException 
+	
+	{
+
+	WebDriverManager.chromedriver().setup();
+
+	ChromeDriver driver = new ChromeDriver();
+
+	driver.get("https://www.saucedemo.com/");
+	
+	driver.manage().window().maximize();
+
+	Thread.sleep(5000);
+    driver.findElement(By.id("user-name")).sendKeys(username);
+	Thread.sleep(5000);
+	driver.findElement(By.id("password")).sendKeys(password);
+	Thread.sleep(5000);
+	driver.findElement(By.id("login-button")).click();
+	
+	//driver.quit();
+	
+ }
+	
+	
+}
+________________________________________________________________________________________________________
+
+Externalizarea 
+
+package ui;
+
+import org.testng.annotations.DataProvider;
+
+public class JavaTest2Extern {
+
+	
+	
+	@DataProvider (name = "credentials") 
+	public Object[][] providerDataSet ()
+	{
+
+		return new Object[][] 
+			{
+
+			{"standard_user", "secret_sauce"},
+			
+			};
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
